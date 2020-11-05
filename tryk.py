@@ -6,16 +6,16 @@ def b1_click():
     a=int(entry1.get())
     b=int(entry2.get())
     c=int(entry3.get())
-    
-    if (a==b) and (b==c) and (a==c):
-        vidp=str("rivnst")
-        entry4.delete(0, END)
-        entry4.insert(0, vidp)
         
     if (a==b) or (a==c) or (b==c):
-        vidp=str("rivnbed")
-        entry4.delete(0, END)
-        entry4.insert(0, vidp)
+        if (a==b) and (b==c):
+            vidp=str("rivnst")
+            entry4.delete(0, END)
+            entry4.insert(0, vidp)
+        else:
+            vidp=str("rivnbed")
+            entry4.delete(0, END)
+            entry4.insert(0, vidp)
         
     if (a+b==c) or (b+c==a) or (a+c==b):
         vidp=str("vyrazhd")
@@ -27,8 +27,8 @@ def b1_click():
         entry4.delete(0, END)
         entry4.insert(0, vidp)
 
-    S=math.sqrt((a+b+c)/2*((a+b+c)/2-a)*((a+b+c)/2-b)*((a+b+c)/2-c))
-    vidp=eval(S)
+    s=math.sqrt((a+b+c)/2*((a+b+c)/2-a)*((a+b+c)/2-b)*((a+b+c)/2-c))
+    vidp=eval(s)
     entry5.delete(0, END)
     entry5.insert(0, vidp)    
 
