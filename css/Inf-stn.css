@@ -1,0 +1,38 @@
+body {
+    font-size: 1.5em;
+   }
+
+table {
+    width: 100%;
+   }
+
+.col1 {
+	color: orange; 
+}
+
+.col2 {
+	color: green; 
+}
+
+.col3 {
+	color: blue; 
+}
+
+.col4 {
+	color: yellow; 
+}
+
+.col5 {
+	color: red; 
+}
+
+.col6 {
+	color: purple; 
+}
+.picture:hover {
+    transform: scale(1.2);
+
+*:hover{
+   border: 5px;
+   transition-duration: 5s;
+}
