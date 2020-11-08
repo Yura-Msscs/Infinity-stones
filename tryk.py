@@ -17,8 +17,8 @@ def b1_click():
             entry4.delete(0, END)
             entry4.insert(0, vidp)
         
-    if (a+b==c) or (b+c==a) or (a+c==b):
-        vidp=str("vyrazhd")
+    if (a+b<=c) or (b+c<=a) or (a+c<=b):
+        vidp=str("neprav")
         entry4.delete(0, END)
         entry4.insert(0, vidp)
 
@@ -26,11 +26,16 @@ def b1_click():
         vidp=str("pryamokut")
         entry4.delete(0, END)
         entry4.insert(0, vidp)
-
-    s=math.sqrt((a+b+c)/2*((a+b+c)/2-a)*((a+b+c)/2-b)*((a+b+c)/2-c))
-    vidp=eval(s)
-    entry5.delete(0, END)
-    entry5.insert(0, vidp)    
+        
+    if (a+b<c) or (b+c<a) or (a+c<b):
+        vidp=str("S ne mozhlyve")
+        entry5.delete(0, END)
+        entry5.insert(0, vidp)
+    else:
+        s=math.sqrt((a+b+c)/2*((a+b+c)/2-a)*((a+b+c)/2-b)*((a+b+c)/2-c))
+        vidp=float(s)
+        entry5.delete(0, END)
+        entry5.insert(0, vidp)
 
 #Window        
 root = Tk()
@@ -47,7 +52,7 @@ labl_2.place(x=260, y=10)
 labl_3 = Label(root, text = 'c', font = 'Arial 18')
 labl_3.place(x=390, y=10)
 
-#Entry's
+#Entries
 entry1 = Entry(root, text = 'a', width = 6, font = 'Arial 18')
 entry1.place(x = 55, y = 10)
 
