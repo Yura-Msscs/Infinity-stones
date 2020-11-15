@@ -18,7 +18,7 @@ def b1_click():
             entry4.insert(0, vidp)
         
     if (a+b<=c) or (b+c<=a) or (a+c<=b):
-        vidp=str("неправильний")
+        vidp=str("розгорнутий")
         entry4.delete(0, END)
         entry4.insert(0, vidp)
 
@@ -26,8 +26,18 @@ def b1_click():
         vidp=str("прямокутний")
         entry4.delete(0, END)
         entry4.insert(0, vidp)
+
+    if (a**2+b**2>c**2) and (a**2+c**2>b**2) and (c**2+b**2>a**2):
+        vidp=str("гострокутний")
+        entry4.delete(0, END)
+        entry4.insert(0, vidp)
+
+    if (a**2+b**2<c**2) or (a**2+c**2<b**2) or (c**2+b**2<a**2):
+        vidp=str("тупокутний")
+        entry4.delete(0, END)
+        entry4.insert(0, vidp)
         
-    if (a+b<c) or (b+c<a) or (a+c<b):
+    if (a+b<=c) or (b+c<=a) or (a+c<=b):
         vidp=str("S не можливе")
         entry5.delete(0, END)
         entry5.insert(0, vidp)
